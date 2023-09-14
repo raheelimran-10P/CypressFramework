@@ -10,6 +10,17 @@ To set up this project on your local machine:
 3. Now if you install any other packages so use command `npm install -save-dev <package-name>` it will install package locally. If you get some error after this command so run `npm cache clean -force`.
 4. If you update or install any new package so update package.json on repo.
 
+## Setup env file at the root
+
+Create cypress.env.json file at the root of the project location, and add below values like
+```
+{
+    "name": "value",
+    "api_server": "http://localhost:8888/api/v1/"
+}
+
+```
+
 ## Running Tests
 
 Run `npx cypress open` or `npm run run` from the command line
