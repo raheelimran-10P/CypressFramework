@@ -1,5 +1,7 @@
 import DemoPage from "../../PageObjects/DemoPage"
 /// <reference types="cypress" />
+require('dotenv').config();
+
 
 context('Demo 01 functionality', () => {
   beforeEach(() => {
@@ -12,7 +14,8 @@ context('Demo 01 functionality', () => {
 
     cy.fixture('DemoTestData').then((data)=> {
        const demoPage = new DemoPage();
-       demoPage.setFirstName(data.firstname);
+       
+       demoPage.setFirstName(Cypress.env('name'));
     })
 
   })

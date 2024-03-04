@@ -4,7 +4,7 @@
 class DemoPage {
 
     firstname="#firstName";
-    male='#genterWrapper > .col-md-9 > :nth-child(12)';
+    male='#genterWrapper > .col-md-9 > :nth-child(1)';
 
     setFirstName(firstname) {
         cy.get(this.firstname).type(firstname);
