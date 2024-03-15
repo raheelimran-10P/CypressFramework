@@ -1,29 +1,34 @@
-import DemoPage from "../../PageObjects/DemoPage"
+import { demoPage } from "../../PageObjects/DemoPage"
+import { url } from "../../fixtures/DemoTestData.json";
 /// <reference types="cypress" />
 
-context('Demo 02 functionality', () => {
+describe('Demo 02 functionality', { tags: ['@Demo', '@regression'] }, () => {
+
   beforeEach(() => {
-    cy.fixture('DemoTestData').then((data)=> {
-    cy.visit(data.url)
-    })
+
+    cy.fixture('DemoTestData.json').then((data) => {
+      cy.visit(data.url);
+      cy.wrap(data).as('data'); // Preserve the loaded data for later use
+
+    });
   })
 
-  it('03 - Demo Test', () => {
+  it('03 - Demo Test', {tags: '@smoke'}, () => {
 
-    cy.fixture('DemoTestData').then((data)=> {
-       const demoPage = new DemoPage();
-       demoPage.setFirstName(data.firstname);
-    })
+    cy.get('@data').then((data) => {
 
-  })
+      demoPage.setFirstName(data.firstname);
+
+    });
+  });
 
   it('04 - Demo Test', () => {
 
-    cy.fixture('DemoTestData').then((data)=> {
-       const demoPage = new DemoPage();
-       demoPage.checkedMale()
-    })
+    cy.get('@data').then((data) => {
+       
+      demoPage.checkedMale()
 
-  })
+    });
+  });
 
-})
+});

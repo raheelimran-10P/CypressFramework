@@ -23,7 +23,8 @@ Create cypress.env.json file at the root of the project location, and add below 
 
 ## Running Tests
 
-Run `npx cypress open` or `npm run run` from the command line
+Run `npx cypress open` or `npx cypress run` from the command line
+Run specific test case `npx cypress run --spec "cypress\e2e\Tests\DemoTests_2.cy.js"` from the command line
 
 
 ## More Info
