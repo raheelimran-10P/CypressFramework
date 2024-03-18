@@ -1,5 +1,5 @@
-import { demoPage } from "../../PageObjects/DemoPage"
-import { url } from "../../fixtures/DemoTestData.json";
+import { demoPage } from "../../../PageObjects/DemoPage"
+import { url } from "../../../fixtures/DemoTestData.json";
 /// <reference types="cypress" />
 
 describe('Demo 02 functionality', { tags: ['@Demo', '@regression'] }, () => {

@@ -1,4 +1,4 @@
-import { demoPage } from "../../PageObjects/DemoPage"
+import { demoPage } from "../../../PageObjects/DemoPage"
 /// <reference types="cypress" />
 require('dotenv').config();
 
