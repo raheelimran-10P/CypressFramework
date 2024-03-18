@@ -6,5 +6,5 @@ services:
             context: .
             dockerfile: ./Dockerfile
         volumes: 
-            - ./dockerReports/:/app/cypress/report
-            - ./dockerReports/:/app/screenshots
+            - ./dockerReports/:/app/cypress/reports
+            - ./dockerReports/:/app/cypress/screenshots

@@ -7,3 +7,4 @@ cypress/screenshots
 cypress.env.json
 package-lock.json
 cypress/downloads
+dockerReports
