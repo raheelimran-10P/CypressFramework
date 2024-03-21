@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 /// <reference types="cypress-xpath" />
 
-class DemoPage {
+export class DemoPage {
 
     firstname="#firstName";
-    male='#genterWrapper > .col-md-9 > :nth-child(12)';
+    male='#genterWrapper > .col-md-9 > :nth-child(1)';
 
     setFirstName(firstname) {
         cy.get(this.firstname).type(firstname);
@@ -15,4 +15,4 @@ class DemoPage {
     }
 }
 
-export default DemoPage;
+export const demoPage = new DemoPage()
