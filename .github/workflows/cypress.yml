@@ -13,12 +13,10 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo '${{ secrets.CYPRESS_ENV_JSON }}' > cypress.env.json
+          echo "${{ secrets.NAME }}" > cypress.env.json
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        env:
-            CYPRESS_NAME: ${{ secrets.NAME }}
       
       - name: Archive test reports
         uses: actions/upload-artifact@v2
