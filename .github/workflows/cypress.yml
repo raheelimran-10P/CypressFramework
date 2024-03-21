@@ -19,3 +19,11 @@ jobs:
         uses: cypress-io/github-action@v6
         env:
             CYPRESS_NAME: ${{ secrets.NAME }}
+      
+      - name: Archive test reports
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress-reports
+          path: |
+            cypress/reports
+            cypress/screenshots
