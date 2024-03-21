@@ -17,6 +17,5 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
-        with:
-          env:
+        env:
             CYPRESS_NAME: ${{ secrets.NAME }}
